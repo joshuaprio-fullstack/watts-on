@@ -7,20 +7,21 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "homepage": {}
   },
   "slices": {
     "CallToAction": {
       "default": {
-        "primary": {
-          "title": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        }
+        "primary": {}
       }
-    }
+    },
+    "HeroSlice": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "ImageGrid": {}
   }
 }
