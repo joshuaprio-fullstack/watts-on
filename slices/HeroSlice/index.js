@@ -1,6 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-
+import { PrismicLink } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
 /**
  * @typedef {import("@prismicio/client").Content.HeroSliceSlice} HeroSliceSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<HeroSliceSlice>} HeroSliceProps
@@ -10,16 +11,20 @@ const HeroSlice = ({ slice }) => (
   <section>
     <span className="title">
       {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
+        <PrismicRichText field={slice.primary.title} />
       }
     </span>
     {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
+      <PrismicRichText field={slice.primary.description} />
     }
+    {
+      slice.items.map((item, i) =>
+        <PrismicLink field={item.cta_link} key={i}>
+          <PrismicNextImage field={slice.primary.image} />
+          {item.cta_text}
+        </PrismicLink>
+      )
+    } 
     <style jsx>{`
         section {
           max-width: 600px;

@@ -22,6 +22,12 @@
         "items": {}
       }
     },
-    "ImageGrid": {}
+    "ImageGrid": {},
+    "Header": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Footer": {}
   }
 }

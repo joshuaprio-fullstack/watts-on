@@ -111,6 +111,120 @@ type CallToActionSliceVariation = CallToActionSliceDefault;
  */
 export type CallToActionSlice = prismicT.SharedSlice<"call_to_action", CallToActionSliceVariation>;
 /**
+ * Primary content in Footer → Primary
+ *
+ */
+interface FooterSliceDefaultPrimary {
+    /**
+     * Title field in *Footer → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: footer.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Footer → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: footer.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Footer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Footer*
+ *
+ */
+type FooterSliceVariation = FooterSliceDefault;
+/**
+ * Footer Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSlice = prismicT.SharedSlice<"footer", FooterSliceVariation>;
+/**
+ * Primary content in Header → Primary
+ *
+ */
+interface HeaderSliceDefaultPrimary {
+    /**
+     * logo field in *Header → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.primary.logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+}
+/**
+ * Item in Header → Items
+ *
+ */
+export interface HeaderSliceDefaultItem {
+    /**
+     * Nav link field in *Header → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.items[].nav_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    nav_link: prismicT.LinkField;
+    /**
+     * dropdown link field in *Header → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.items[].dropdown_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    dropdown_link: prismicT.SelectField<"1" | "2">;
+}
+/**
+ * Default variation for Header Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Header`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeaderSliceDefaultPrimary>, Simplify<HeaderSliceDefaultItem>>;
+/**
+ * Slice variation for *Header*
+ *
+ */
+type HeaderSliceVariation = HeaderSliceDefault;
+/**
+ * Header Shared Slice
+ *
+ * - **API ID**: `header`
+ * - **Description**: `Header`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderSlice = prismicT.SharedSlice<"header", HeaderSliceVariation>;
+/**
  * Primary content in HeroSlice → Primary
  *
  */
@@ -265,6 +379,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageGridSliceDefaultPrimary, ImageGridSliceDefaultItem, ImageGridSliceDefault, ImageGridSliceVariation, ImageGridSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, ImageGridSliceDefaultPrimary, ImageGridSliceDefaultItem, ImageGridSliceDefault, ImageGridSliceVariation, ImageGridSlice };
     }
 }

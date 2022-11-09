@@ -41,6 +41,163 @@
         },
         "screenshotPaths": {}
       },
+      "footer": {
+        "library": "slices",
+        "id": "footer",
+        "name": "Footer",
+        "description": "Footer",
+        "model": {
+          "id": "footer",
+          "type": "SharedSlice",
+          "name": "Footer",
+          "description": "Footer",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Footer",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Suddenly",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt occaecat sint nulla. Aliqua laborum sit ipsum commodo sit reprehenderit ut ad sint in commodo tempor.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "footer"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "header": {
+        "library": "slices",
+        "id": "header",
+        "name": "Header",
+        "description": "Header",
+        "model": {
+          "id": "header",
+          "type": "SharedSlice",
+          "name": "Header",
+          "description": "Header",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Header",
+              "primary": {
+                "logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "items": {
+                "nav_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Nav link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "dropdown_link": {
+                  "type": "Select",
+                  "config": {
+                    "label": "dropdown link",
+                    "placeholder": "",
+                    "options": [
+                      "1",
+                      "2"
+                    ]
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "nav_link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                },
+                "dropdown_link": "2"
+              }
+            ],
+            "primary": {
+              "logo": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a"
+              }
+            },
+            "slice_type": "header"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "hero_slice": {
         "library": "slices",
         "id": "hero_slice",
